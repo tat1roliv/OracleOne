@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    
+    <script>
+        function pulaLi(){
+            document.write("<br><br>");
+        }
+        function exibe(frase){
+            document.write(frase);
+            pulaLi();
+        }
+        function calculaImc(peso, altura){
+            let imc = (peso/(altura^2));
+            pulaLi();
+            exibe(Math.round(imc));
+        }
+        
+        let peso = parseFloat();
+        let altura = parseFloat();
+        
+        calculaImc(80, 1.80);
+        calculaImc(90, 1.90);     
+        
+    </script>
+    
+</body>
+</html>
