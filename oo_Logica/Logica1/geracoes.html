@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerações no Brasil</title>
+</head>
+<body>
+   
+
+    <script>
+       
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function exibe(frase) {
+            document.write(frase);
+            pulaLinha();
+        }   
+        
+        let idReproducao = 28;
+        let anoAtual = 2021;
+        let anoDesc = 1500 
+        let nGeracoes = (anoAtual - anoDesc) / idReproducao;
+
+        exibe("O número de gerações nascidas no Brasil desde " + anoDesc + " é de " + nGeracoes);
+    </script>
+    
+</body>
+</html>
