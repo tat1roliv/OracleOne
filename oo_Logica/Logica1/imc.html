@@ -17,16 +17,21 @@
         }
         function calculaImc(peso, altura){
             let imc = (peso/(altura^2));
-            pulaLi();
-            exibe(Math.round(imc));
+            return imc;
+            
         }
         
         let peso = parseFloat();
         let altura = parseFloat();
         
-        calculaImc(80, 1.80);
-        calculaImc(90, 1.90);     
+        let imcuser1 = calculaImc(80.5, 1.80);
+
+        exibe(Math.round(imcuser1));    
         
+        let imcuser2 = calculaImc(90.5, 1.90); 
+        
+        exibe(Math.round(imcuser2));
+
     </script>
     
 </body>
