@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    
+    <script>
+        function pulaLi(){
+            document.write("<br><br>");
+        }
+        function exibe(frase){
+            document.write(frase);
+            pulaLi();
+        }
+        function calculaImc(altura, peso){
+            var imc = (peso/(altura^2));
+            return imc;
+        }
+        
+        var nome = prompt("Digite seu nome: ");
+        var alturaInfo = prompt(nome + ", informe sua altura: ");
+        var pesoInfo = prompt(nome + ", informe seu peso: ");
+
+        var imc = calculaImc(alturaInfo, pesoInfo); 
+        
+        exibe("O seu Imc é de " + Math.round(imc));
+
+        if (imc < 18.5){
+            exibe("O seu Imc está abaixo do recomendado");
+        }
+        if (imc > 35){
+            exibe("O seu Imc está acima do recomendado");
+        }
+        if (imc >= 18.5 && imc <= 35){
+            exibe("O seu Imc está no padrão recomendado!");
+            
+        }
+
+    </script> 
+</body>
+</html>
