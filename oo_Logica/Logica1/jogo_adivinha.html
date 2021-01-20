@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    
+    <script>
+        function pulaLi(){
+            document.write("<br><br>");
+        }
+        function exibe(frase){
+            document.write(frase);
+            pulaLi();
+        }
+      
+        var numeroPensado = Math.round(Math.random() * 10); 
+        //para 1<n<10; 100 para 1<n<100.
+        console.log(numeroPensado);
+
+        var chute = parseInt(prompt("Digite seu chute: "));
+
+        if (chute == numeroPensado){
+            exibe("Gol");
+        }
+        else {
+            exibe("Fora");
+            
+        }
+
+    </script> 
+</body>
+</html>
