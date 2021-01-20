@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Idades</title>
+</head>
+<body>
+    
+    <script>
+        function pulaLi(){
+            document.write("<br><br>");
+        }
+        function exibe(frase){
+            document.write(frase);
+            pulaLi();
+        }
+        
+        var numeroInformado = parseInt(prompt("Digite o número de pessoas: "));
+
+        var numero = 1;
+
+        var totalIdades = 0;
+
+        while ( numero <= numeroInformado ){
+            var idade = parseInt(prompt("Digite a idade: "));
+            totalIdades = totalIdades + idade;
+            numero++;
+            
+        }
+        var mediaIdades = totalIdades/numeroInformado;
+        exibe(Math.round(mediaIdades));     
+        exibe("Fim de execução");
+
+    </script>
+
+
+</body>
+</html>
