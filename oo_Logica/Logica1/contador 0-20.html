@@ -16,14 +16,12 @@
             pulaLi();
         }
 
-        var contador = 30;
+        var contador = 20;
         
-        while( contador < 40 && contador >= 30 ) {
-            contador = contador + 1;
-            if (contador != 37 && contador != 33){
-               exibe(contador); 
-            }
-            ;
+        while( contador >= 0 ) {
+            exibe(contador);
+            contador = contador - 1;
+            console.log(contador); 
         }
         exibe("Fim de execução.");
     </script> 
