@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMC</title>
+    <title>Adivinha Reload</title>
 </head>
 <body>
     
@@ -16,12 +16,13 @@
             pulaLi();
         }
 
+        var n = parseInt(prompt("Digite o número limite para seu chute: "));
+               
         function sorteia(n){
-            
+            return Math.round(Math.random() * n);
         }
-      
-        var numeroPensado = Math.round(Math.random() * 10); 
-        //para 1<n<10; 100 para 1<n<100.
+        
+        var numeroPensado = sorteia(n);
         console.log(numeroPensado);
 
         var chute = parseInt(prompt("Digite seu chute: "));
