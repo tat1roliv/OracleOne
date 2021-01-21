@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas Array</title>
+</head>
+<body>
+   
+    <h1>Receitas :) </h1>
+
+<script>
+   
+    var ingredientes = [];
+
+    var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+
+    var contador = 1;
+
+    while( contador <= quantidade ) {
+
+        var ingrediente = prompt("Informe o ingrediente " + contador);
+
+        //procurar no array
+
+        var match = false;
+
+        for (var posicao = 0; posicao < ingredientes.length; posicao++ ){
+        //if true
+            if (ingredientes[posicao] == ingrediente){
+                match = true;
+                break;
+            }
+        }   
+
+        //if false
+
+        if (match == false){
+            ingredientes.push(ingrediente);
+            contador++;
+        }
+
+     }
+        
+//console array
+    console.log(ingredientes);
+    
+
+</script>
+    
+    
+</body>
+</html>
