@@ -11,30 +11,49 @@
 
 <script>
    
+    //criando o array ingredientes
     var ingredientes = [];
 
+    //criando a variavel quantidade
+    //solicita ao usuario que informe o numero de ingredientes e armazena na variavel
     var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
 
+    //cria variavel contador
     var contador = 1;
 
+    
     while( contador <= quantidade ) {
-
+    /*
+    enquanto contador for <= que o valor armazenado na variavel quantidade,
+    vai solicitar um ingrediente e informar a posição deste ingrediente de acordo com o valor armazenado na variavel contador
+    */
         var ingrediente = prompt("Informe o ingrediente " + contador);
 
-        //procurar no array
-
+    /*
+    procura se os dados informados coincidem com os que ja estao armazenados no array, atribuindo //false a variavel match criada
+    */
         var match = false;
 
+        /*
+        cria a variavel posicao (para varrer as diferentes posições do array) e enquanto o numero de posicoes for menor que a quantidade de posicoes do array faz esta verificacao
+        */
+         /*
+        incrementa em 1 a posicao, para passar para a proxima posicao do vetor
+        */
         for (var posicao = 0; posicao < ingredientes.length; posicao++ ){
         //if true
+            //o valor ja esta armazenado, entao deu match no array (true)
+            //informa ao usuario que ja foi digitado esse item (alert)
             if (ingredientes[posicao] == ingrediente){
                 match = true;
+                alert("Hey, parece que você já digitou isso!")
                 break;
             }
         }   
 
         //if false
-
+            /*como o valor informado nao esta armazenado no array, ele é acrescentado no array*/
+            /*incrementa o contador +1 para passar para o proximo ingrediente, ate que chegue ao numero de ingredientes informado pelo usuario*/
         if (match == false){
             ingredientes.push(ingrediente);
             contador++;
@@ -42,7 +61,7 @@
 
      }
         
-//console array
+//exibe as posicoes do array apenas no console
     console.log(ingredientes);
     
 
