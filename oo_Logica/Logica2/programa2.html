@@ -26,16 +26,16 @@
         pincel.strokeRect( xt , yt , 50 , 50 ) 
     }
     
+    let xt = 0;
 
-    desenhaQuadrado(0,0 , 'pink');
-    desenhaQuadrado(50,0, 'yellow');
-    desenhaQuadrado(100,0, 'gray');
+    while (xt < 600) {
 
-    desenhaQuadrado(0,50, 'yellow');
-    desenhaQuadrado(0,100, 'gray');
+        desenhaQuadrado( xt, 0, 'pink');
+        desenhaQuadrado( xt, 50, 'yellow');
+        desenhaQuadrado( xt, 100, 'white');
+        xt = xt + 50
 
-
-    
+    }
 
 
 
