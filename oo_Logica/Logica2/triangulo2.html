@@ -12,11 +12,10 @@
 <script>
 
     var tela = document.querySelector('canvas');
-
     var pincel = tela.getContext('2d');
 
     function desenhaEsquadro(xa, ya, xb, yb, cor) {
-        pincel.fillStyle = cor;//cor[i];
+        pincel.fillStyle = cor;
         pincel.beginPath();
         pincel.moveTo(xa,ya);
         pincel.lineTo(xa,yb);
@@ -25,15 +24,12 @@
         
 }
 
-//cor = [ 'blue', 'green'];
+cores = ['blue', 'red'];
 
-cores = ['blue', 'green'];
+desenhaEsquadro(50, 50, 400, 400, cores[0]);
+desenhaEsquadro(100, 175, 275, 350, cores[1]);
 
-desenhaEsquadro(50, 50, 400, 400, cores[0])//cor[i];
-
-desenhaEsquadro(100, 175, 275, 350, cores[1])//cor[i];
-
-    
+   
 </script>
 
 
