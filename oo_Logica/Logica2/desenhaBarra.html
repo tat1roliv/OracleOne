@@ -6,64 +6,52 @@
 </head>
 
 <body>
+<!--barras.html-->
 
-    <!--
-        declara pantalla <canvas>
-    -->    <canvas width="600" height="400"></canvas>
-    
+<canvas width = "600" height = "400"> </canvas>
+
 <script>
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
 
-//funcao desenha retangulo 
-    function desenhaRetangulo(x, y, largura, altura, cor) {
-        var tela = document.querySelector('canvas');
-        var pincel = tela.getContext('2d');
+    //vetor com cores do grafico na ordem de exibicao, de cima para baixo
+    var cores = ["blue", "green", "yellow", "red"];
 
-        pincel.fillStyle=cor;
-        pincel.fillRect(x,y, largura, altura);
-        pincel.strokeStyle='black';
-        pincel.strokeRect(x,y, largura, altura);
+    //vetor das series % do grafico
+    var serie2015 = [50, 25, 20, 5];
+    var serie2016 = [65, 20, 13, 2];
+
+    //funcao que desenha um texto
+    function desenhaTexto(texto, x, y){
+        pincel.fillStyle = "black";
+        pincel.font = "18px Georgia";
+        pincel.fillText(texto, x, y);
     }
 
-    //Textos
-    function desenhaTexto(x , y, texto) {
-        var tela = document.querySelector('canvas');
-        var pincel = tela.getContext('2d');
+    //funcao que desenha uma barra com 4 retangulos
+    function desenhaBarra(x, y, serie, cores, texto){
 
-        pincel.font='15px Georgia';
-        pincel.fillStyle='black';
-        pincel.fillText(texto, x, y);    
-    }
+        desenhaTexto(texto, x, y - 10);
 
-    //desenha barra geral de cada serie
-    function desenhaBarra(x, y, serie, cores, texto) {
-        //chama a funcao textos
-        desenhaTexto(x, y - 10, texto);
+        //variavel para posicionar os retangulos certinhos no eixo y; inicialmente recebe o valor de y
+        var tamy = y;
 
-        var somaAltura = 0;//var aux
-        
-        //varrer o array em todas as suas posicoes
-        //desenhaRetangulo(x, y, largura, altura, cor)
-        //somaAltura - desloca para o proximo y
-        for (var i = 0; i < serie.length; i++) {
-            var altura = serie[i];
-            desenhaRetangulo(x, y + somaAltura, 50, altura, cores[i]);
-            somaAltura = somaAltura + altura;
+        //laco de repeticao para criar os 4 retangulos
+        for(var i = 0; i < 4; i++){
+
+            //atribui ao pincel o valor da cor, conforme i++
+            pincel.fillStyle = cores[i];
+            pincel.fillRect(x, tamy, 50, serie[i]);//desenhar um retangulo
+            pincel.strokeRect(x, tamy, 50, serie[i]);//desenhar a borda
+
+            tamy += serie[i];//adiciona ao valor o tamanho da serie, para que o proximo retangulo comece do retangulo anterior
+
         }
     }
 
-    //array cores do grafico na ordem de exibicao
-    var cores = ['blue','green','yellow', 'red'];
-    //array percentuais grafico de 2015
-    var serie2015 = [50,25,20,5];
-    //array percentuais grafico de 2016
-    var serie2016 = [65,20,13,2];
-
-    //desenhaBarra(x, y, serie, cores, texto)
+    //chamada da funcao para desenhar as duas barras
     desenhaBarra(50, 50, serie2015, cores, '2015');
     desenhaBarra(150, 50, serie2016, cores, '2016');
 
 </script>
-
-
-</body>
 </html>
