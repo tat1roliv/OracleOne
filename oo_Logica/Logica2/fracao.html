@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Logica 2</title>
+</head>
+
+<body>
+
+    <canvas width="600" height="400"></canvas>
+    
+<script>
+
+    function desenhaQuadrado(xt, yt, tamanho,  cor){
+        var tela = document.querySelector('canvas');
+
+        var pincel = tela.getContext('2d');
+
+        //quadrado
+        pincel.fillStyle = cor ;
+        pincel.fillRect( xt , yt , tamanho , tamanho );
+        pincel.fillStroke = 'gray';
+        pincel.strokeStyle = 'red'
+        pincel.strokeRect( xt , yt , tamanho , tamanho ) 
+    
+    }
+    
+     function desenhaTexto(texto, xt , yt) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.font='20px Georgia';
+        pincel.fillStyle='black';
+        pincel.fillText(texto, xt, yt);    
+    }
+
+    var yt = 50;
+    desenhaQuadrado(50, yt, 100, 'green');
+    desenhaQuadrado(150, yt, 100, 'green');
+    desenhaQuadrado(250, yt, 100, 'green');
+    desenhaQuadrado(350, yt, 100, 'white');
+
+
+</script>
+
+
+</body>
+</html>
