@@ -20,8 +20,8 @@
         pincel.fillRect(0,0,600,400);
 
         //array cores
-        var cores = [ 'blue', 'red', 'green']
-        var i = 0
+        
+        var cor = 'blue';
 
         function desenhaCirculo(evento){
             
@@ -30,14 +30,12 @@
 
             var raio = 10;
             
-            if (evento.shiftKey = true){
+            if (evento.shiftKey == true){
                 raio = raio + 20;
-                pincel.fillStyle = cores[0];
-
-
+       
             } else
 
-                pincel.fillStyle = cores[i];
+                pincel.fillStyle = cor;
                 pincel.beginPath();
                 pincel.arc(x, y, raio, 0, 2 *3.14);
                 pincel.fill();
@@ -45,20 +43,8 @@
                 console.log( x + ',' + y );
         }
 
-        function ChangeColor(){
-            i++;
-            console.log(i);
-
-            if (i >= cores.length){
-                i = 0;//retorna ao blue
-            }
-
-            return false;
-        }
-
         tela.onclick = desenhaCirculo;
 
-        tela.oncontextmenu = ChangeColor;
 
 </script>
 
