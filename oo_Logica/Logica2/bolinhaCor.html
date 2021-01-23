@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica 2</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+
+    <!--input color-->
+    <br>
+    
+    Color:<input type="color" id="colorInput">
+       
+<script>
+
+    //tela+pincel
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    //inicia com habilitação para desenhar desativada
+    var desenhar = false;
+
+    //chama a cor atribuida ao input
+    var corInput = document.querySelector('input')
+    console.log(corInput);
+           
+    function desenhaCirculo(evento) {
+        //chama o valor da variavel desenhar, se true, desenha,
+        if (desenhar){
+            var x = evento.pageX - tela.offsetLeft;
+            var y = evento.pageY - tela.offsetTop;
+            pincel.fillStyle = corInput.value;
+            pincel.beginPath();
+            pincel.arc(x, y, 10, 0, 2 * 3.14);
+            pincel.fill();
+            console.log(x + ',' + y);
+
+            }
+        
+        }
+
+    //chama desenho circulo ao movimentar o mouse
+    tela.onmousemove = desenhaCirculo;
+
+    //habilita desenhar pelo boolean atribuido a variavel
+    function desenha(){
+        desenhar = true;
+    }
+
+    //desabilita desenhar pelo boolean atribuido a variavel
+    function naoDesenha(){
+        desenhar = false;
+    }
+    
+     //ao clicar no mouse, chama a funcao desenha (variavel desenhar = true)
+     tela.onmousedown = desenha;
+
+        //ao soltar o mouse, chama a funcao naoDesenha (variavel desenhar = false)
+
+     tela.onmouseup = naoDesenha;
+
+</script>
+
+</body>
+</html>
