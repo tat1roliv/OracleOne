@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Logica 2</title>
+</head>
+
+<body>
+
+    <canvas width="600" height="400"></canvas>
+    
+<script>
+
+        //pincelTela
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        //fundotela
+        pincel.fillStyle = 'gray';
+        pincel.fillRect(0,0,600,400);
+
+        //define cor
+        var cor = 'blue';
+
+        //define raio inicial
+        var raio = 10;
+        
+        function desenhaCirculo(evento){
+            //(-)offset da pagina    
+            var x = evento.pageX - tela.offsetLeft;
+            var y = evento.pageY - tela.offsetTop;
+            
+            //verifica se o raio pode ser aumentado / aumenta o raio
+            if (evento.shiftKey == true && raio + 10 <= 40){
+                raio = raio + 10;
+            
+            //verifica se o raio pode ser diminuido / diminui o raio
+            }
+            if(evento.altKey == true && raio - 5 >= 10){
+                raio = raio - 5;
+
+            }
+
+            //executa o circulo
+                pincel.fillStyle = cor;
+                pincel.beginPath();
+                pincel.arc(x, y, raio, 0, 2 *3.14);
+                pincel.fill();
+          
+                console.log( x + ',' + y );
+        }
+        //exibe circulo onclick
+        tela.onclick = desenhaCirculo;
+
+
+</script>
+
+</body>
+</html>
