@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Logica 2</title>
+</head>
+
+<body>
+
+    <canvas width="600" height="400"></canvas>
+    
+<script>
+        //pincelTela
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        //fundotela
+        pincel.fillStyle = 'gray';
+        pincel.fillRect(0,0,600,400);
+
+        //array cores
+        var cores = [ 'blue', 'red', 'green']
+        var i = 0
+
+        function desenhaCirculo(evento){
+            
+            var x = evento.pageX - tela.offsetLeft;
+            var y = evento.pageY - tela.offsetTop;
+
+            pincel.fillStyle = cores[i];
+            pincel.beginPath();
+            pincel.arc(x, y, 10, 0, 2 *3.14);
+            pincel.fill();
+            
+            console.log( x + ',' + y );
+        }
+
+        function ChangeColor(){
+            i++;
+            console.log(i);
+
+            if (i >= cores.length){
+                i = 0;//retorna ao blue
+            }
+
+            return false;
+        }
+
+        tela.onclick = desenhaCirculo;
+
+        tela.oncontextmenu = ChangeColor;
+
+</script>
+
+</body>
+</html>
