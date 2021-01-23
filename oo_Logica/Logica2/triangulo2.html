@@ -24,10 +24,17 @@
         
 }
 
-cores = ['blue', 'red'];
+var cores = ['blue', 'red'];
+var i=0
+while (i<cores.length){
+    console.log(cores[i]);
+    desenhaEsquadro(50, 50, 400, 400, cores[i]);
+    i++;
+    console.log(cores[i]);
+    desenhaEsquadro(100, 175, 275, 350, cores[i]);
+    i++;
 
-desenhaEsquadro(50, 50, 400, 400, cores[0]);
-desenhaEsquadro(100, 175, 275, 350, cores[1]);
+}
 
    
 </script>
