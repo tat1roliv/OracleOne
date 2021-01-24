@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica 2</title>
+</head>
+<body>
+
+    <canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function limpaTela() {
+
+        pincel.clearRect(0, 0, 600, 400);
+    }
+
+    //color
+    var cor = 'pink';
+
+    var x = 100;
+    var y = 100;
+    
+    var raio = 20;
+    var iRaio = 0;
+    
+        function atualizaTela() {
+    
+            limpaTela();
+
+            if( raio > 30) {//raioMax = 30;
+                iRaio = - 1;
+               
+            } else if ( raio <= 20) {//raioMin = 20; //else if - melhor processamento
+                iRaio = + 1;
+            } 
+            raio = raio + iRaio;
+
+            console.log(raio);
+            desenhaCirculo(x, y, raio, cor);  
+    
+        }
+        
+        setInterval(atualizaTela, 20);//20mls
+
+</script>
+</body>
+</html>
+
