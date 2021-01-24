@@ -25,7 +25,17 @@
         pincel.fill();
     }
 
-    desenhaCirculo(20,20,10,cor);
+    function limpaTela(){
+        pincel.clearRect(0,0,600,400);//limpa
+    }
+
+    for(var x = 20; x<600; x++){
+        limpaTela;
+
+        desenhaCirculo(x,20,10,cor);
+    }
+
+    
 
 </script>
 
