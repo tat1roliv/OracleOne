@@ -16,7 +16,7 @@
 function desenhaBandeiraBrasil() {
     var tela = document.querySelector('canvas');
     var pincel = tela.getContext('2d');
-
+    
     pincel.fillStyle="green";
     pincel.fillRect(0, 0, 600, 400);
 
@@ -44,7 +44,6 @@ function desenhaBandeiraBrasil() {
 function desenhaBandeiraAlemanha() {
     var tela = document.querySelector('canvas');
     var pincel = tela.getContext('2d');
-
     pincel.fillStyle = 'black';
     pincel.fillRect(0, 0, 600, 133);
 
@@ -54,6 +53,24 @@ function desenhaBandeiraAlemanha() {
     pincel.fillStyle = 'yellow';
     pincel.fillRect(0, 266, 600, 133);
 }
+
+//escrever uma função trocaBandeira e use a função setInterval para chamá-la a cada 3 segundos.
+
+var exibeBandeira = true;
+
+function trocaBandeira(){
+    
+    if(exibeBandeira == true){
+        desenhaBandeiraAlemanha();
+        
+    } else {
+        desenhaBandeiraBrasil();
+          
+    }
+    exibeBandeira = !exibeBandeira;//(inversor)
+}
+
+setInterval(trocaBandeira, 200);
 
 </script>
 
