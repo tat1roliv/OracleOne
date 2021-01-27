@@ -8,6 +8,18 @@ body{
     background-color: #cccccc;
 }
 
+#banner{
+   width: 100%;
+}
+
+h1{
+    text-align: center;
+    height: 150px;
+    border: 10px solid black;
+    padding: 20px;
+
+}
+
 p{
     text-align: center;
 }
