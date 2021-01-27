@@ -14,15 +14,12 @@ body{
 
 .principal{
    background-color: #cccccc; 
+   padding: 30px;
 }
 
-h1{
-    text-align: center;
-    height: 150px;
-    border: 10px solid black;
-    padding: 20px;
-    margin: 40px;
-
+.tituloPrincipal{
+    text-align: left;
+    padding-left: 20px;
 }
 
 p{
@@ -38,5 +35,20 @@ em strong{
 
 .beneficios{
     background-color: #ffffff;
+    padding: 20px;
+}
 
+.tituloCentralizado{
+    text-align: center;
+}
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 10%;
+}
+
+.imagemBeneficios{
+    width: 50%;
 }
