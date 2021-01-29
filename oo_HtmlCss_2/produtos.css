@@ -35,6 +35,11 @@ nav a{
     font-size: 22px;
 }
 
+nav a:hover{
+    color: #c78c79;
+    text-decoration: underline;
+}
+
 /*produtos*/
 .produtos{
     width: 940px;
