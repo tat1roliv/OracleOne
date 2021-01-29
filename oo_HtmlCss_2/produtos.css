@@ -3,25 +3,21 @@
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 /*topo*/
 header{
     background-color: #bbbbbb;
     padding: 20px 0;
 }
-
 .caixa{
     position: relative;
     width: 940px;
     margin: 0 auto;
 }
-
 nav{
     position: absolute;
     top:120px;
     right: 0px;
 }
-
 nav li{
     display: inline;
     margin: 0 0 0 15px;
@@ -33,20 +29,18 @@ nav a{
     color: #000000;
     font-weight: bold;
     font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 nav a:hover{
     color: #c78c79;
     text-decoration: underline;
 }
-
 /*produtos*/
 .produtos{
     width: 940px;
     margin: 0 auto;
     padding: 50px 0;
 }
-
 .produtos li{
     display: inline-block;
     text-align: center;
@@ -57,29 +51,36 @@ nav a:hover{
     border: 2px solid #000000;
     border-radius: 20px;    
 }
-
 .produtos li:hover{
     border: 2px solid #C78C79;
 }
 .produtos li:active{
-    border: 2px solid #79c77f;
-    
+    border: 2px solid #79c77f;   
 }
 .produtos li:hover h2{
     font-size: 35px;
-
-.produtos h2{
+}
+.produtos h2 {
     font-size: 30px;
     font-weight: bold;
 }
-
 .produtos .descricao{
     font-style: italic;
     font-size: 18px;
 }
-
 .produtos .preco{
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
+}
+/*footer*/
+footer{
+    text-align: center;
+    background: url("bg.jpg");
+    padding: 40px 0;
+}
+
+footer p{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
