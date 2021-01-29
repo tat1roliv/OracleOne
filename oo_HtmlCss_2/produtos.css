@@ -80,7 +80,9 @@ footer{
     padding: 40px 0;
 }
 
-footer p{
+.copy{
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    margin-top: 20px;
 }
