@@ -1,8 +1,8 @@
 console.log('hola');
 
-let titulo = document.querySelector("h1");
+let titulo = document.querySelector(".titulo");
 
 console.log(titulo);
 console.log(titulo.textContent);
 
-titulo.textContent = "calopsita";
+titulo.textContent = "health care";
