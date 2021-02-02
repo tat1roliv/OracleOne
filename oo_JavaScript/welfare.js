@@ -3,8 +3,14 @@
 //titulo.textContent = "health care";
 
 //busca geral nos dados do primeiro paciente
-let paciente = document.querySelector("#primeiroPaciente");
+let paciente = document.querySelectorAll("#.paciente");
 
+for ( var i = 0 ; i < pacientes.length ; i++ ){
+    console.log(i);
+}
+
+
+//calculo bmi
 //dados peso
 //busca no conteudo da id a classe peso
 let tdPeso = paciente.querySelector(".info-peso");
@@ -17,7 +23,6 @@ let alturaPaciente = tdAltura.textContent;
 
 
 //validacoes
-
 let tdBmi = paciente.querySelector(".info-imc");
 
 let pesoValido = true;
@@ -31,13 +36,11 @@ if (pesoPaciente <= 0 || pesoPaciente > 500){
 }
 
 //altura
-
 if(alturaPaciente <= 0 || alturaPaciente > 2.5){
     //console.log("Altura inválida");
     alturaValido = false;
     tdBmi.textContent = "height error";
 }
-
 
 //BMI
 if( pesoValido && alturaValido){
@@ -45,7 +48,6 @@ if( pesoValido && alturaValido){
     //console.log(bmiPaciente);
 
     //exibe bmi
-    
     tdBmi.textContent = bmiPaciente;
 }   
 
