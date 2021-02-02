@@ -34,6 +34,8 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
         //console.log("Peso inválido");
         pesoValido = false;
         tdBmi.textContent = "width error";
+        //paciente.style.backgroundColor = "lightcoral";
+        paciente.classList.add('paciente-invalido');
     }
 
     //altura
@@ -41,6 +43,8 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
         //console.log("Altura inválida");
         alturaValido = false;
         tdBmi.textContent = "height error";
+        //paciente.style.backgroundColor = "lightcoral";
+        paciente.classList.add('paciente-invalido');
     }
 
     //BMI
