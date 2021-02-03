@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="botao">clique-me</button>
+
+<script>
+
+var botao = document.querySelector('#botao');
+
+    function botaoHandler() {
+
+        alert('Botão clicado');
+    }
+
+    
+    function outroHandler() {
+
+    alert('Botão clicado também!');
+    }
+
+    //addEventListener -> melhor pratica (facilita a manutenção/substituicao de eventos)
+    /*
+    botao.addEventListener('click', botaoHandler);
+    botao.addEventListener('click', outroHandler);
+    */
+    botao.onclick = botaoHandler;
+    botao.onclick = outroHandler;
+</script>
+</body>
+</html>
