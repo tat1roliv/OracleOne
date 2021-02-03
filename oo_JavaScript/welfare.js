@@ -56,8 +56,20 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
         tdBmi.textContent = bmiPaciente.toFixed(2);//2 casas decimais
     }   
 }
+/*
+//listener
+titulo.addEventListener("click", mostraMensagem);
 
+//exibe msm
+function mostraMensagem(){
+    console.log("clickclickclick");  
+}
+*/
 
+//chamando a funcao para on button click
+var botaoAdicionar = document.querySelector("#adicionar-paciente")
 
-
-
+//funcao anonima
+botaoAdicionar.addEventListener("click", function () {
+    console.log("clickclickclick");
+});
