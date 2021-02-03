@@ -71,12 +71,14 @@ var botaoAdicionar = document.querySelector("#adicionar-paciente")
 
 //funcao anonima
 botaoAdicionar.addEventListener("click", function (event) {
+
     event.preventDefault();//previne comportamentos padroes do browser
-    //console.log("clickclickclick");
+
+        //console.log("clickclickclick");
 
     //incluir novo user from form
     var  form = document.querySelector("#form-adiciona");
-    //console.log(form.name.value);
+        //console.log(form.name.value);
 
     //coletando as informações digitadas
     var nome = form.nome.value;
