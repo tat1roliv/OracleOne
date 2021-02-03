@@ -70,6 +70,7 @@ function mostraMensagem(){
 var botaoAdicionar = document.querySelector("#adicionar-paciente")
 
 //funcao anonima
-botaoAdicionar.addEventListener("click", function () {
+botaoAdicionar.addEventListener("click", function (event) {
+    event.preventDefault();//previne comportamentos padroes do browser
     console.log("clickclickclick");
 });
