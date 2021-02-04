@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul>
+        <li class="convidado">
+            Nome <span class="nome">Douglas</span>,
+            idade <span class="idade">23</span>
+        </li>
+        <li class="convidado">
+            Nome <span class="nome">Daniel</span>,
+            idade <span class="idade">42</span>
+        </li>    
+        <li class="convidado">
+            Nome <span class="nome">Marcos</span>,
+            idade <span class="idade">27</span>
+        </li>    
+        <li class="convidado">
+            Nome <span class="nome">Flávio</span>,
+            idade <span class="idade">18</span>
+        </li>
+        Total das idades: <span class="total"></span>
+
+    </ul>
+
+<script>
+//é possível extrair o trecho referente a uma lista de convidados da página para em seguida ter aquele que recebe a lista e realiza o total para nós. Pense em uma maneira de organizar melhor o código. 
+
+//listaConvidados
+
+function listaConvidados(){
+
+    var itens = document.querySelectorAll('.convidado');
+
+    var convidados = [];//cria o vetor vazio para receber a lista de convidados
+
+    for(var i = 0; i < itens.length; i++) { //enquanto houver convidados na lista, coleta  e envia dados para o array 
+
+        var convidadoUnico = {
+          nome : itens[i].querySelector('.nome').textContent,
+          idade : parseInt(itens[i].querySelector('.idade').textContent)  
+        }
+        convidados.push(convidado);
+        
+    }
+     return convidados;
+}
+
+//somando as idades
+function somaIdades(convidados){ //enquanto houver convidados na lista, coleta  e envia dados para o array
+     
+    var totalDasIdades = 0;
+    //selecionar idade no array
+    for(var i = 0; i < convidados.length; i++) {
+        totalDasIdades+=convidados[i].idade;
+    }
+    return totalDasIdades;
+}
+
+function exibeTotalDasIdades(total) {
+        document.querySelector('.total').textContent = total;    
+    }
+
+
+    var convidados = criaListaDeConvidados();
+    var totalDasIdades = calculaTotalDasIdades(convidados);
+    exibeTotalDasIdades(totalDasIdades);
+
+</script>
+</body>
+</html>
