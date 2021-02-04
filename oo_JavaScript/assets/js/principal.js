@@ -48,14 +48,14 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
         var bmiPaciente = calculaBmi(peso, altura);
         //console.log(bmiPaciente);
 
-        //exibe bmi 
-        tdBmi.textContent = bmiPaciente.toFixed(2);//2 casas decimais
+        //exibe bmi na tabela
+        tdBmi.textContent = bmiPaciente;
     }   
 }
 
 function calculaBmi(peso, altura){
     var bmi = 0;
     bmi = pesoPaciente / (alturaPaciente*alturaPaciente);
-    return bmi;
+    return bmi.toFixed(2);//2 casas decimais;
 
 }
