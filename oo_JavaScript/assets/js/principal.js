@@ -1,7 +1,7 @@
 //bmi
 
 //busca geral nos dados do primeiro paciente
-let pacientes = document.querySelectorAll(".paciente");
+var pacientes = document.querySelectorAll(".paciente");
 
 //calculo bmi
 for ( var i = 0 ; i < pacientes.length ; i++ ){
@@ -11,19 +11,19 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
     
     //dados peso
     //busca no conteudo da id a classe peso
-    let tdPeso = paciente.querySelector(".info-peso");
+    var tdPeso = paciente.querySelector(".info-peso");
     //busca o valor do peso na td
-    let pesoPaciente = (tdPeso.textContent);
+    var pesoPaciente = (tdPeso.textContent);
 
     //dados altura
-    let tdAltura = paciente.querySelector(".info-altura");
-    let alturaPaciente = tdAltura.textContent;
+    var tdAltura = paciente.querySelector(".info-altura");
+    var alturaPaciente = tdAltura.textContent;
 
     //validacoes
-    let tdBmi = paciente.querySelector(".info-imc");
+    var tdBmi = paciente.querySelector(".info-imc");
 
-    let pesoValido = true;
-    let alturaValido = true;
+    var pesoValido = true;
+    var alturaValido = true;
 
     //peso
     if (pesoPaciente <= 0 || pesoPaciente > 500){
@@ -45,10 +45,17 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
 
     //BMI
     if( pesoValido && alturaValido){
-        let bmiPaciente = pesoPaciente / (alturaPaciente*alturaPaciente);
+        var bmiPaciente = calculaBmi(peso, altura);
         //console.log(bmiPaciente);
 
         //exibe bmi 
         tdBmi.textContent = bmiPaciente.toFixed(2);//2 casas decimais
     }   
+}
+
+function calculaBmi(peso, altura){
+    var bmi = 0;
+    bmi = pesoPaciente / (alturaPaciente*alturaPaciente);
+    return bmi;
+
 }

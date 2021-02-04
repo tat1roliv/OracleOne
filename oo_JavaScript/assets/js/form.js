@@ -32,12 +32,14 @@ botaoAdicionar.addEventListener("click", function (event) {
     pesoTd.textContent = peso;
     alturaTd.textContent = altura;
     gorduraTd.textContent = gordura;
+    bmiTd.textContent = calculaBmi(peso, altura);
 
     //colunas-> child da linha
     pacienteTr.appendChild(nomeTd);
     pacienteTr.appendChild(pesoTd);
     pacienteTr.appendChild(alturaTd);
     pacienteTr.appendChild(gorduraTd);
+    pacienteTr.appendChild(bmiTd);
 
     //nova linha (new user) -> child da tabela (tbody)
     var tabela = document.querySelector("#tabela-pacientes");
