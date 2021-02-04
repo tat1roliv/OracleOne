@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="botao">Calcula</button>
+    <input class="numero">
+    <input class="tabuada">
+    <span class="resultado"></span>
+
+<script>
+
+    function dadosTela (seletor) {
+        return document.querySelector(seletor);
+    }
+
+    function geraTabuada(numero, tabuada) {
+        return numero * tabuada;
+    }
+
+    var botao = buscaElemento('.botao');
+    var numero = buscaElemento('.numero');
+    var tabuada = buscaElemento('.tabuada');
+    var resultado = buscaElemento('.resultado');
+
+    botao.addEventListener('click', function() {
+
+        resultado.textContent = geraTabuada(numero.value, tabuada.value);
+
+    });
+
+</script>
+</body>
+</html>
