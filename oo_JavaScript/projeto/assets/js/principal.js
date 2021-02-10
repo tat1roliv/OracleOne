@@ -22,15 +22,14 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
     //validacoes
     var tdBmi = paciente.querySelector(".info-imc");
 
-    var pesoValido = true;
+    var pesoValido = validaPeso(peso);//true or false
     var alturaValido = true;
 
     //peso
-    if (pesoPaciente <= 0 || pesoPaciente > 500){
-        //console.log("Peso inválido");
+    if (!pesoValido){
+        console.log("Peso inválido");
         pesoValido = false;
-        tdBmi.textContent = "width error";
-        //paciente.style.backgroundColor = "lightcoral";
+        paciente.style.backgroundColor = "lightcoral";
         paciente.classList.add('paciente-invalido');
     }
 
@@ -46,12 +45,21 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
     //BMI
     if( pesoValido && alturaValido){
         var bmiPaciente = calculaBmi(peso, altura);
-        //console.log(bmiPaciente);
+        console.log(bmiPaciente);
 
         //exibe bmi na tabela
         tdBmi.textContent = bmiPaciente;
     }   
 }
+
+function validaPeso(peso){
+    if (peso >=0 && peso <500){
+        return true;
+    } else{
+        return false;
+    }
+}
+
 
 function calculaBmi(peso, altura){
     var bmi = 0;

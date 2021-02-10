@@ -7,6 +7,7 @@ botaoAdicionar.addEventListener("click", function (event) {//funcao anonima
 
     event.preventDefault();//previne comportamentos padroes do browser
 
+
     //incluir novo user from form
     var  form = document.querySelector("#form-adiciona");
        
@@ -60,4 +61,12 @@ function montaTd(dado, classe){
     //add class paciente ao novo objet da tabela
     td.classList.add(classe);
     
+}
+
+//verificações/validações
+function validaPaciente(paciente){
+
+    if ( paciente.peso < 2.0 && paciente.altura >= 0 ){
+        return true;
+    }
 }
