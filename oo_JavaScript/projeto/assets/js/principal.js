@@ -23,10 +23,10 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
     var tdBmi = paciente.querySelector(".info-imc");
 
     var pesoValido = validaPeso(peso);//true or false
-    var alturaValido = true;
+    var alturaValido = validaAltura(altura);//true or false
 
     //peso
-    if (!pesoValido){
+    if ( !pesoValido ){
         console.log("Peso inválido");
         pesoValido = false;
         paciente.style.backgroundColor = "lightcoral";
@@ -53,13 +53,20 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
 }
 
 function validaPeso(peso){
-    if (peso >=0 && peso <500){
+    if (peso >=0 && peso < 500){
         return true;
     } else{
         return false;
     }
 }
 
+function validaAltura(peso){
+    if ( altura >=0 && altura < 3 ){
+        return true;
+    } else{
+        return false;
+    }
+}
 
 function calculaBmi(peso, altura){
     var bmi = 0;

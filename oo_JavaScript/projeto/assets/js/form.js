@@ -66,7 +66,7 @@ function montaTd(dado, classe){
 //verificações/validações
 function validaPaciente(paciente){
 
-    if ( paciente.peso < 2.0 && paciente.altura >= 0 ){
+    if ( paciente.altura <= 2.0 && paciente.altura > 0 ){
         return true;
     }
 }
