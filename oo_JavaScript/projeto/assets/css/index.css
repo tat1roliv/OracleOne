@@ -137,10 +137,10 @@ button[disabled=disabled], button:disabled {
 .campo-invalido{
 	border: 1px solid red;
 }
+.paciente-invalido{
+	background-color: "lightcoral";
+}
 /*alterando cores - msg erro*/
 #mensagem-erro{
 	color:red;
-}
-.paciente-invalido{
-	background-color: "lightcoral";
 }
