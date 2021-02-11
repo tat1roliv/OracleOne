@@ -1,3 +1,13 @@
+/*
+
+//importando funcoes
+import { exibeMensagemErro } from './form.js';
+import { montaTr } from './form.js';
+import { montaTd } from './form.js';
+import { validaPaciente } from './form.js';
+*/
+
+
 //bmi
 
 //busca geral nos dados do primeiro paciente
@@ -51,7 +61,9 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
         tdBmi.textContent = bmiPaciente;
     }   
 }
-
+/*
+export default 
+*/
 function validaPeso(peso){
     if (peso >=0 && peso < 1000){
         return true;
@@ -59,7 +71,9 @@ function validaPeso(peso){
         return false;
     }
 }
-
+/*
+export default 
+*/
 function validaAltura(altura){
     if ( altura >=0 && altura < 3 ){
         return true;
@@ -68,6 +82,7 @@ function validaAltura(altura){
     }
 }
 
+/*export default */
 function calculaBmi(peso, altura){
     var bmi = 0;
     bmi = pesoPaciente / (alturaPaciente*alturaPaciente);

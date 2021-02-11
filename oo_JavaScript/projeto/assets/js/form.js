@@ -1,3 +1,11 @@
+/*
+
+//importando funcoes
+import { validaPeso } from './principal.js';
+import { validaAltura } from './principal.js';
+import { calculaBmi } from './principal.js';
+*/
+
 //formulario entrada new user
 
 //chamando a funcao para on button click
@@ -39,6 +47,9 @@ botaoAdicionar.addEventListener("click", function (event) {//funcao anonima
 });
 
 //mensagem de erro
+/*
+export default 
+*/
 function exibeMensagemErro(erros){
     var ul = document.querySelector("#mensagens-erro");
     ul.innerHTML = "";
@@ -50,6 +61,9 @@ function exibeMensagemErro(erros){
 }
 
 //coletando as informações digitadas
+/*
+export default 
+*/
 function obtemPacientesDoFormulario(form){
        
     var paciente = { 
@@ -62,10 +76,13 @@ function obtemPacientesDoFormulario(form){
     return paciente;  
 }
 //montar tr 
+/*
+export default 
+*/
 function montaTr(paciente){
         //criando a variavel para nova tr / linha(new user)
         var pacienteTr = document.createElement("tr");
-        pacienteTr.classList.add("paciente")//add class paciente ao novo objet da tabela
+        pacienteTr.classList.add("paciente")//add class paciente ao novo object da tabela
 
         pacienteTr.appendChild(montaTd(paciente.nome, "info-nome"));
         pacienteTr.appendChild(montaTd(paciente.peso, "info-peso"));
@@ -77,6 +94,8 @@ function montaTr(paciente){
 }
 
 //montar td
+/*export default 
+*/
 function montaTd(dado, classe){
     //criando colunas da nova linha
     var td = document.createElement("td");
@@ -88,6 +107,9 @@ function montaTd(dado, classe){
 }
 
 //verificações/validações
+/*
+export default 
+*/
 function validaPaciente(paciente){
 
     var erros = [];
