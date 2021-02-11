@@ -19,11 +19,11 @@ botaoAdicionar.addEventListener("click", function (event) {//funcao anonima
 
     //msg erro
     var erros = validaPaciente(paciente);
+    console.log(erros);
 
     //valida paciente
     if(erros.length > 0){
-        var mensagemErro = document.querySelector("#mensagem-erro-1");
-        mensagemErro.textContent = erros;
+        exibeMensagemErro(erros);
         return;
     }
 
@@ -34,7 +34,20 @@ botaoAdicionar.addEventListener("click", function (event) {//funcao anonima
 
     //limpar formulario
     form.reset();
+    var mensagemErro = document.querySelector("mensagens-erro");
+    mensagemErro.innerHTML = "";
 });
+
+//mensagem de erro
+function exibeMensagemErro(erros){
+    var ul = document.querySelector("#mensagens-erro");
+    ul.innerHTML = "";
+    erros.forEach(function(erro){
+        var li = document.createElement("li");
+        li.textContent = erro;
+        ul.appendChild(li);
+    });
+}
 
 //coletando as informações digitadas
 function obtemPacientesDoFormulario(form){
@@ -79,12 +92,20 @@ function validaPaciente(paciente){
 
     var erros = [];
 
+    if ( paciente.nome.length == 0 ){
+        erros.push("você deve declarar o nome");
+    }
+
     if ( !validaPeso(paciente.peso) ){
         erros.push("peso inválido");
     }
 
     if ( !validaAltura(paciente.altura) ){
         erros.push("altura inválida");
+    }
+
+    if (paciente.gordura.length == 0 ){
+        erros.push("a gordura não pode ser zero!");
     }
     return erros;
 }
