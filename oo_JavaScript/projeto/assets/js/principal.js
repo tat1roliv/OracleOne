@@ -15,6 +15,7 @@ var pacientes = document.querySelectorAll(".paciente");
 
 //calculo bmi
 for ( var i = 0 ; i < pacientes.length ; i++ ){
+    
     console.log(pacientes[i]);
 
     var paciente = pacientes[i];

@@ -80,8 +80,11 @@ function obtemPacientesDoFormulario(form){
 export default 
 */
 function montaTr(paciente){
+
+
         //criando a variavel para nova tr / linha(new user)
         var pacienteTr = document.createElement("tr");
+
         pacienteTr.classList.add("paciente")//add class paciente ao novo object da tabela
 
         pacienteTr.appendChild(montaTd(paciente.nome, "info-nome"));
@@ -103,6 +106,7 @@ function montaTd(dado, classe){
     td.textContent = dado;
     //add class paciente ao novo objet da tabela
     td.classList.add(classe);
+    return td;
     
 }
 
