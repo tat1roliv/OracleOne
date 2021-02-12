@@ -1,5 +1,4 @@
 /*
-
 //importando funcoes
 import { exibeMensagemErro } from './form.js';
 import { montaTr } from './form.js';
@@ -15,7 +14,7 @@ var pacientes = document.querySelectorAll(".paciente");
 
 //calculo bmi
 for ( var i = 0 ; i < pacientes.length ; i++ ){
-    
+
     console.log(pacientes[i]);
 
     var paciente = pacientes[i];
@@ -53,14 +52,12 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
         paciente.classList.add('paciente-invalido');
     }
 
-    //BMI
     if( validaPeso && validaAltura){
-        var bmiPaciente = calculaBmi(peso, altura);
-        console.log(bmiPaciente);
-
-        //exibe bmi na tabela
-        tdBmi.textContent = bmiPaciente;
-    }   
+            var bmiPaciente = calculaBmi(pesoPaciente, alturaPaciente);
+            console.log(bmiPaciente);
+            //exibe bmi na tabela
+            tdBmi.textContent = bmiPaciente;
+        } 
 }
 /*
 export default 
@@ -89,4 +86,12 @@ function calculaBmi(peso, altura){
     bmi = pesoPaciente / (alturaPaciente*alturaPaciente);
     return bmi.toFixed(2);//2 casas decimais;
 
-}
+}   
+
+//BMI
+//funcao
+
+
+   
+
+        

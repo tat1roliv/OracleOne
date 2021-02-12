@@ -43,7 +43,9 @@ botaoAdicionar.addEventListener("click", function (event) {//funcao anonima
     //limpar formulario
     form.reset();
     var mensagemErro = document.querySelector("mensagens-erro");
-    mensagemErro.innerHTML = "";
+
+   // mensagemErro.innerHTML = "";
+
 });
 
 //mensagem de erro
