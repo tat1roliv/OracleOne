@@ -1,13 +1,4 @@
-/*
-
-//importando funcoes
-import { validaPeso } from './principal.js';
-import { validaAltura } from './principal.js';
-import { calculaBmi } from './principal.js';
-*/
-
 //formulario entrada new user
-
 //chamando a funcao para on button click
 var botaoAdicionar = document.querySelector("#adicionar-paciente")
 
