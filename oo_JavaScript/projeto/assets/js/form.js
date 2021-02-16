@@ -7,7 +7,7 @@ botaoAdicionar.addEventListener("click", function (event) {//funcao anonima
     var  form = document.querySelector("#form-adiciona");//incluir novo user from form    
     var paciente = obtemPacientesDoFormulario(form);//coletando as informações digitadas
         
-    var pacienteTr = montaTr(paciente); //montar tr
+    var pacienteTr = montaTr(paciente);
 
     var erros = validaPaciente(paciente);
 
@@ -24,15 +24,14 @@ botaoAdicionar.addEventListener("click", function (event) {//funcao anonima
     var mensagensErro = document.querySelector("#mensagens-erro");
     mensagensErro.innerHTML = "";
 
-
-
 });
 
 function exibeMensagemErro(erros){
     var ul = document.querySelector("#mensagens-erro");
     ul.innerHTML = "";
 
-    erros.forEach(function(erro){//foreach
+ //foreach->for
+    erros.forEach(function(erro){
         var li = document.createElement("li");
         li.textContent = erro;
         ul.appendChild(li);
@@ -65,8 +64,6 @@ function montaTr(paciente){
         
     return pacienteTr;
 }
-
-//montar td
 
 function montaTd(dado, classe){
 
