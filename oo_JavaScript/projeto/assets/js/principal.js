@@ -1,4 +1,4 @@
-var pacientes = document.querySelectorAll(".paciente");//busca geral nos dados do primeiro paciente
+var pacientes = document.querySelectorAll(".paciente");
 
 function validaPeso(peso){
     if (peso >=0 && peso < 1000){
