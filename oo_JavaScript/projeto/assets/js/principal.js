@@ -53,10 +53,9 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
         tdBmi.textContent = "Altura Inválida"
         paciente.classList.add('paciente-invalido');
     }
-
+    //validacao final + exibe bmi na tabela
     if( validaPeso && validaAltura){
-        var bmi = calculaBmi(pesoPaciente, alturaPaciente);
-       //exibe bmi na tabela
+        var bmi = calculaBmi(pesoPaciente, alturaPaciente);  
         tdBmi.textContent = bmi;
        } 
 
