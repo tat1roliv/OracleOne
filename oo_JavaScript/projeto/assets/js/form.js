@@ -1,12 +1,13 @@
 
-let botaoAdicionar = document.querySelector("#adicionar-paciente");//formulario entrada new user
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
 
-botaoAdicionar.addEventListener("click", function (event) {//funcao anonima
-    event.preventDefault();//previne comportamentos padroes do browser
+botaoAdicionar.addEventListener("click", function (event) {
+    event.preventDefault();//previne browser
     
-    var  form = document.querySelector("#form-adiciona");//incluir novo user from form    
-    var paciente = obtemPacientesDoFormulario(form);//coletando as informações digitadas
-        
+    var  form = document.querySelector("#form-adiciona");  
+    
+    var paciente = obtemPacientesDoFormulario(form);
+    
     var pacienteTr = montaTr(paciente);
 
     var erros = validaPaciente(paciente);
@@ -21,22 +22,11 @@ botaoAdicionar.addEventListener("click", function (event) {//funcao anonima
     tabela.appendChild(pacienteTr);
 
     form.reset();    //limpar formulario
+
     var mensagensErro = document.querySelector("#mensagens-erro");
     mensagensErro.innerHTML = "";
 
 });
-
-function exibeMensagemErro(erros){
-    var ul = document.querySelector("#mensagens-erro");
-    ul.innerHTML = "";
-
- //foreach->for
-    erros.forEach(function(erro){
-        var li = document.createElement("li");
-        li.textContent = erro;
-        ul.appendChild(li);
-    });
-}
 
 function obtemPacientesDoFormulario(form){
        
@@ -53,7 +43,6 @@ function obtemPacientesDoFormulario(form){
 function montaTr(paciente){
 
         var pacienteTr = document.createElement("tr");
-
         pacienteTr.classList.add("paciente");
 
         pacienteTr.appendChild(montaTd(paciente.nome, "info-nome"));
@@ -68,9 +57,7 @@ function montaTr(paciente){
 function montaTd(dado, classe){
 
     var td = document.createElement("td");
-
     td.textContent = dado;
-
     td.classList.add(classe);
     return td;
     
@@ -83,15 +70,6 @@ function validaPaciente(paciente){
     if ( paciente.nome.length == 0 ){
         erros.push("Você deve declarar o nome");
     }
-
-    if ( !validaPeso(paciente.peso) ){
-        erros.push("Peso inválido");
-    }
-
-    if ( !validaAltura(paciente.altura) ){
-        erros.push("Altura inválida");
-    }
-
     if (paciente.gordura.length == 0 ){
         erros.push("Você deve declarar a gordura");
     }
@@ -101,5 +79,25 @@ function validaPaciente(paciente){
     if (paciente.altura.length == 0 ){
         erros.push("Você deve declarar a altura");
     }
+    if ( !validaPeso(paciente.peso) ){
+        erros.push("Peso inválido");
+    }
+
+    if ( !validaAltura(paciente.altura) ){
+        erros.push("Altura inválida");
+    }
     return erros;
+
+}
+
+function exibeMensagemErro(erros){
+    var ul = document.querySelector("#mensagens-erro");
+    ul.innerHTML = "";
+
+ //foreach->for
+    erros.forEach(function(erro){
+        var li = document.createElement("li");
+        li.textContent = erro;
+        ul.appendChild(li);
+    });
 }
