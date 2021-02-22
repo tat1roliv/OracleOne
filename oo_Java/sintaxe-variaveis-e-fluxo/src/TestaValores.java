@@ -1,12 +1,12 @@
 
 public class TestaValores {
 
-	public static void main(String[] args) { //ctrl_
-			int primeiro = 5;
-			int segundo = 7;
-			
-			segundo = primeiro;
-			
-			System.out.println(segundo);
+	public static void main(String[] args) { // ctrl_
+		int primeiro = 5;
+		int segundo = 7;
+
+		segundo = primeiro;
+
+		System.out.println(segundo);
 	}
 }
