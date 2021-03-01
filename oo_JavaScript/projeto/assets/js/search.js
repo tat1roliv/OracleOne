@@ -8,6 +8,12 @@ botaoProcurar.addEventListener("click", function(){
 
     xhr.addEventListener("load", function(){
         console.log(xhr.responseText);
+        var resposta = xhr.responseText;
+        console.log(typeof resposta);
+
+        var pacientes = JSON.parse(resposta);
+        console.log(typeof resposta);
+
 
     });
 
