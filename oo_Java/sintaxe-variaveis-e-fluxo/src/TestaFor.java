@@ -4,6 +4,5 @@ public class TestaFor {
 	for(int cont = 0; cont <=10; cont++) {
 			System.out.println(cont);
 		}
-	System.out.println(cont);
 	}
 }
