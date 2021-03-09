@@ -8,7 +8,7 @@ tabela.addEventListener("dblclick", function(event){
     //setTimeOut(function , parameter (time) )
     setTimeout(function(){
         event.target.parentNode.remove();//parentNode -pega a tag pai no html
-    }, 1000)//mls   
+    }, 555)//mls   
 });
 
 //this

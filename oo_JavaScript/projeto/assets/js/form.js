@@ -1,13 +1,12 @@
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
 
 botaoAdicionar.addEventListener("click", function (event) {
+
     event.preventDefault();//previne browser
     
-    var  form = document.querySelector("#form-adiciona");  
+    var form = document.querySelector("#form-adiciona");  
     
     var paciente = obtemPacientesDoFormulario(form);
-    
-    var pacienteTr = montaTr(paciente);
 
     var erros = validaPaciente(paciente);
 
@@ -16,11 +15,7 @@ botaoAdicionar.addEventListener("click", function (event) {
         return;
     }
 
-    var tabela = document.querySelector("#tabela-pacientes");
-
-    tabela.appendChild(pacienteTr);
-
-    adicionaPacientenaTabela(paciente);
+    adicionaPacientenaTabela(paciente);     
 
     form.reset();    //limpar formulario
 
@@ -58,8 +53,9 @@ function montaTr(paciente){
 function montaTd(dado, classe){
 
     var td = document.createElement("td");
-    td.textContent = dado;
     td.classList.add(classe);
+    td.textContent = dado;
+    
     return td;
     
 }

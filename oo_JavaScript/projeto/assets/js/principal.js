@@ -20,13 +20,14 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
         console.log("Peso inválido");
         pesoValido = false;
         tdBmi.textContent = "Peso Inválido"
-        paciente.classList.add('paciente-invalido');
+        paciente.classList.add("paciente-invalido");
     }
 
     if( !alturaValida  ){
+        console.log("Altura inválida!");
         alturaValida = false;
         tdBmi.textContent = "Altura Inválida"
-        paciente.classList.add('paciente-invalido');
+        paciente.classList.add("paciente-invalido");
     }
     //validacao final + exibe bmi na tabela
     if( pesoValido && alturaValida ){
@@ -37,13 +38,17 @@ for ( var i = 0 ; i < pacientes.length ; i++ ){
 }
 
 function calculaBmi(peso, altura){
+   
     var bmi = 0;
     bmi = peso / (altura*altura);
+    
     return bmi.toFixed(2);
 
 }   
+
 function validaPeso(peso){
-    if (peso >=0 && peso < 1000){
+
+    if (peso >=0 && peso <= 1000){
         return true;
     } else{
         return false;
@@ -51,7 +56,7 @@ function validaPeso(peso){
 }
 
 function validaAltura(altura){
-    if ( altura >=0 && altura <= 3 ){
+    if ( altura >= 0 && altura <= 3.00 ){
         return true;
     } else{
         return false;
