@@ -96,15 +96,43 @@ form{
     margin: 40px 0; /*bottom/top sides*/
 }
 
-form label{
+form label,
+form p{
     display: block;
     font-size: 1rem;
     margin: 0 0 10px;
 }
-form input{
+.input-padrao{
     display: block;
     font-size: 1rem;
     margin: 0 0 20px;
     padding: 10px 25px;
     width: 50%;
 }
+.checkbox{
+    margin: 20px 0;
+}
+/*
+p {
+    color: red;
+}
+
+form p{
+    color: blue; 
+}
+.teste{
+    color: yellow;
+}
+p.teste{
+    color: orange; 
+}
+#teste{
+    color: lightcoral;
+}
+/********
+/*
+inline (direto no html, style)->1000
+id ->100
+class ->10
+tag ->1
+*/
