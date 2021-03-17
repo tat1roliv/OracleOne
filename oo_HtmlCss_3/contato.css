@@ -97,7 +97,7 @@ form{
 }
 
 form label,
-form p{
+form legend{
     display: block;
     font-size: 1rem;
     margin: 0 0 10px;
