@@ -134,6 +134,29 @@ form legend{
     scale 20%++
     */
 }
+table{
+    margin: 20px 0 40px;
+}
+thead{
+    background-color: #555555;
+    color: white;
+    font-weight: lighter;
+}
+td,
+th{
+    border: 1px solid black;
+    padding: 10px 20px;
+}
+tfoot{
+    font-weight: 400;
+    color: rgb(197, 108, 0);
+}
+
+
+
+
+
+
 /*
 p {
     color: red;
