@@ -190,9 +190,6 @@ td, th {
 	*/
 
 }
-.imagembeneficios{
-	width: 60%;
-}
 .mapa{
 	padding: 3em 0;
 	/*2 parametros (bottom/top) (left/right)*/
@@ -200,6 +197,31 @@ td, th {
 .mapa p{
 	margin: 0 0 2em;
 	text-align: center;
+}
+.beneficios{
+	padding: 3em 0;
+}
+.conteudo-beneficios{
+	width: 640px;
+	margin: 0 auto;
+}
+.lista-beneficios{
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+.itens{
+	line-height: 1.5em;
+}
+.itens:first-child{
+	font-weight: bold;
+}
+.itens:nth-child(2n){
+	font-weight: lighter;
+	/*2n = todos os elemtnos pares*/
+}
+.imagem-beneficios{
+	width: 60%;
 }
 .video{
 	width: 560px;
