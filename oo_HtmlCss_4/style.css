@@ -162,6 +162,7 @@ td, th {
 	/*
 	bottom
 	*/
+	clear: left;
 }
 
 .principal p {
@@ -172,6 +173,18 @@ td, th {
 }
 .principal em{
 	font-style: italic;
+}
+.utensilios{
+	width: 120px;
+	float: left;
+	margin: 0 20px 20px 0;
+
+	/*
+	0 top 0 right 0 bottom 0 left
+
+	float afeta toda a parte subsequente da pagina-> clear
+	*/
+
 }
 .imagembeneficios{
 	width: 60%;
