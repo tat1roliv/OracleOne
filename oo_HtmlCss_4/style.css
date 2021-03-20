@@ -149,7 +149,7 @@ td, th {
 	/*
 	text-shadow: 1px 1px #000000 ;
 	*/
-	
+
 }
 .titulo-principal::first-letter{
 	font-weight: 400;
@@ -256,33 +256,29 @@ font-style: italic;
 	margin: 1em auto;	
 }
 
-
-
 /*
-main > p{
-	background: red;
-}
-para acessar os filhos de determinado elemento. Por exemplo, para acessar todos os p dentro de main
-
-
-Seletor +, para acessar o primeiro irmão de determinado elemento. Por exemplo, para acessar o primeiro p após um img:
-img + p {
-}
-
-Seletor ~, para acessar todos os irmãos de determinado elemento. Por exemplo, para acessar todos os p após um img:
-img ~ p {
-}
-
-/*
-selecionar todos os elementos exceto uma classe especifica
-****exclusao****
-
-.principal p:not(#missao){
-	background: yellow;
-}
-
-Seletor not, para acessar os elementos, exceto algum. Por exemplo, para acessar todos os p dentro de main, exceto o p que tem id missao:
-
-main p:not(#missao) {
-}
+media query
 */
+
+@media screen and (max-width: 480px) {
+    .caixa, 
+	.principal, 
+	.conteudo-beneficios,
+	.mapa-conteudo,
+	.video {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
+}
+
