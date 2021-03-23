@@ -1,8 +1,5 @@
 var numInput =  document.querySelector(".input-decimal").value;
 
-console.log(numInput.textContent);
-//var numero = 5
-
 function toBinary(dec){
     return (dec >>> 0).toString(2);
 }
