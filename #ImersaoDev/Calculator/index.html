@@ -14,28 +14,40 @@
         <h1 class="page-title">Calculator</h1>
         <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-calculadora.svg" class="page-logo"
             alt="">
-        <div class="calculadora">
+        <div class="calculator">
             <form action="">
-                <h2></h2>
+                <h2 class="result">xxxx</h2>
             </form>
             <div class="keyboard">
-                <input type="button" class='calc-btn' onclick="erase()" value="">
-                <input type="button" class='calc-btn' onclick="addParameter(1)" value="1">
-                <input type="button" class='calc-btn' onclick="addParameter(2)" value="2">
-                <input type="button" class='calc-btn' onclick="addParameter(3)" value="3">
-                <input type="button" class='calc-btn' onclick="addParameter(4)" value="4">
-                <input type="button" class='calc-btn' onclick="addParameter(5)" value="5">
-                <input type="button" class='calc-btn' onclick="addParameter(6)" value="6">
-                <input type="button" class='calc-btn' onclick="addParameter(7)" value="7">
-                <input type="button" class='calc-btn' onclick="addParameter(8)" value="8">
-                <input type="button" class='calc-btn' onclick="addParameter(9)" value="9">
-                <input type="button" class='calc-btn' onclick="addParameter(0)" value="0">
-                <input type="button" class='calc-btn' onclick="addParameter('.')" value=".">
-                <input type="button" class='calc-btn' onclick="addParameter('-')" value="-">
-                <input type="button" class='calc-btn' onclick="addParameter('+')" value="+">
-                <input type="button" class='calc-btn' onclick="addParameter('/')" value="÷">
-                <input type="button" class='calc-btn' onclick="addParameter('*')" value="x">
-                <input type="button" class='calc-btn-res' onclick="addEqual()" value="=">
+                
+                    <div class="half1">
+                        <div class="n1-9">
+                            <input type="button" class='calc-btn' onclick="addParameter(1)" value="1">
+                            <input type="button" class='calc-btn' onclick="addParameter(2)" value="2">
+                            <input type="button" class='calc-btn' onclick="addParameter(3)" value="3">
+                            <input type="button" class='calc-btn' onclick="addParameter(4)" value="4">
+                            <input type="button" class='calc-btn' onclick="addParameter(5)" value="5">
+                            <input type="button" class='calc-btn' onclick="addParameter(6)" value="6">
+                            <input type="button" class='calc-btn' onclick="addParameter(7)" value="7">
+                            <input type="button" class='calc-btn' onclick="addParameter(8)" value="8">
+                            <input type="button" class='calc-btn' onclick="addParameter(9)" value="9">
+                        </div>
+                        <div class="n0">                   
+                            
+                            <input type="button" class='calc-btn' onclick="addParameter(0)" value="0">
+                            <input type="button" class='calc-btn' onclick="addParameter('.')" value=".">
+                        </div>
+                    </div>
+                    <div class="half2">
+                        <div class="operations">
+                            <input type="button" class='calc-btn-color' onclick="addParameter('-')" value="-">
+                            <input type="button" class='calc-btn-color' onclick="addParameter('+')" value="+">
+                            <input type="button" class='calc-btn-color' onclick="addParameter('/')" value="÷">
+                            <input type="button" class='calc-btn-color' onclick="addParameter('*')" value="x">
+                            <input type="button" class='calc-btn-color' onclick="addEqual()" value="=">
+                        </div>
+                    </div>
+                
             </div>
         </div>
     </div>

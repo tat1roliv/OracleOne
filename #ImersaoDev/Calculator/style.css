@@ -2,7 +2,6 @@ body {
     font-family: 'Roboto Mono',monospace;
     min-height: 854px;
     background-image: url('https://images.pexels.com/photos/5412081/pexels-photo-5412081.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-    background-color: #000000;
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -15,12 +14,12 @@ body {
   }
   
   .page-title {
-    color: #ffffff;
+    color: black;
     margin: 0 0 5px;
   }
   
   .page-subtitle {
-    color: #ffffff;
+    color:black;
     margin-top: 5px;
   }
   
@@ -28,24 +27,63 @@ body {
     width: 200px;
   }
   
-  .calculadora {
-    width: 264px;
-    height:360px;
+  .calculator {
+    width: 350px;
+    height:420px;
     /*background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-2-calculadora-calc.png');*/
     margin: 0 auto;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.699);
   }
   
   h2 {
-    position: absolute;
-    font-size:16px;
-    font-weight:bold;
-    top: 142px;
-    left: calc(50% - 72.5px);
-    width: 145px;
+    background-color: rgb(200, 200, 200);
+    color: black;
+    height: 2rem;
+    font-size:2rem;
+    text-align: right;
+    padding: 1rem;
+    margin: 0 0 10px 2rem; 
+    width: 250px;
     text-align:center;
+    border: 1px solid black;  
   }
-  
+  .keyboard{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+  }
+  .half1{
+    width: 250px; 
+  }
+  .half2{
+    width: 100px; 
+  }
+  .calc-btn {
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem 0 0 1rem;
+    color: rgb(172, 130, 130);
+    background-color: rgb(220, 220, 220);
+    font-size: 2rem;
+    text-align: center;
+    vertical-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  .calc-btn-color{
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem 0 0 1rem;
+    color: rgb(172, 130, 130);
+    background-color: rgb(220, 220, 220);
+    font-size: 2rem;
+    text-align: center;
+    vertical-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
   .alura-logo {
     width: 40px;
     position: absolute;
