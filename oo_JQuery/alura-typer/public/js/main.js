@@ -22,4 +22,21 @@ campo.on("input", function(){
 
 });
 
+//timer campo
+var tempoRestante = $("#tempo-digitacao").text();
+
+campo.on("focus", function(){
+   var cronometroId = setInterval(function(){
+      tempoRestante--;
+      $("#tempo-digitacao").text(tempoRestante);
+
+      if(tempoRestante < 1){
+         campo.attr("disabled", true);
+         clearInterval(cronometroId);
+      }
+      
+   }, 1000);
+   
+});
+
 
