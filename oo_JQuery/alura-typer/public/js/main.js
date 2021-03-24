@@ -25,7 +25,7 @@ campo.on("input", function(){
 //timer campo
 var tempoRestante = $("#tempo-digitacao").text();
 
-campo.on("focus", function(){
+campo.one("focus", function(){// on (intermitente) x one (executa apenas uma vez) functions
    var cronometroId = setInterval(function(){
       tempoRestante--;
       $("#tempo-digitacao").text(tempoRestante);
