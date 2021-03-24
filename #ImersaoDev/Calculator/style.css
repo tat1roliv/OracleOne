@@ -64,8 +64,8 @@ body {
     width: 3rem;
     height: 3rem;
     margin: 1rem 0 0 1rem;
-    color: rgb(172, 130, 130);
-    background-color: rgb(220, 220, 220);
+    color: white;
+    background-color: #ff9100;
     font-size: 2rem;
     text-align: center;
     vertical-align: center;
@@ -76,8 +76,8 @@ body {
     width: 3rem;
     height: 3rem;
     margin: 1rem 0 0 1rem;
-    color: rgb(172, 130, 130);
-    background-color: rgb(220, 220, 220);
+    color: #a13800;
+    background-color: #829baf;
     font-size: 2rem;
     text-align: center;
     vertical-align: center;
