@@ -1,11 +1,12 @@
-function addNumber(){
-  //
+var valor;
+var resultado;
+function insert(num){
+    valor = document.calculator.textview.value += num;
 }
-
-function addOperator(){
-  //
+function reset(){
+    document.calculator.textview.value = '';
 }
-
-function showResult(){
-  //
+function result(){
+    resultado = eval(valor);
+    document.calculator.textview.value = resultado.toLocaleString('pt-BR');
 }
