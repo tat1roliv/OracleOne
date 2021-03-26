@@ -3,6 +3,7 @@ $(document).ready(function(){ //$(document).ready => $(function(){ //code });
    inicializaContadores();
    inicializaCronometro();
    $("#botao-reiniciar").click(reiniciar);
+   inicializaMarcadores();
 });
 
 function atualizaTamanhoFrase(){
@@ -49,6 +50,29 @@ function inicializaCronometro(){
 });
 };
 
+//verificacao texto digitado
+function inicializaMarcadores(){
+
+   var frase = $(".frase").text();
+campo.on("input", function(){
+   
+   var digitado = campo.val();
+   var comparavel = frase.substr(0, digitado.length);
+   console.log("frase" + frase);
+   console.log("comparavel"+comparavel);
+
+   if (digitado == comparavel) {
+      campo.addClass("campo-correto");
+      campo.removeClass("campo-errado");
+   }else{
+      campo.addClass("campo-errado");
+      campo.removeClass("campo-correto");
+   }
+
+
+});
+}
+
 //botao
 var tempoInicial =  $("#tempo-digitacao").text();
 
@@ -60,7 +84,9 @@ function reiniciar(){
       $("#contador-caracteres").text("0");
       $("#tempo-digitacao").text(tempoInicial);
       inicializaCronometro();
-      campo.toggleClass("campo-digitacao-desativado")
+      campo.toggleClass("campo-digitacao-desativado");
+      campo.removeClass("campo-errado");
+      campo.removeClass("campo-correto")
 
    });
 }
