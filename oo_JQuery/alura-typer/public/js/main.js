@@ -41,6 +41,8 @@ function inicializaCronometro(){
          if(tempoRestante < 1){
             campo.attr("disabled", true);
             clearInterval(cronometroId);
+            //campo.css("background-color", "lightgray");
+            campo.addClass(".campo-digitacao-desativado");
          }
          
       }, 1000); 

@@ -1,0 +1,12 @@
+.campo-digitacao{
+    font-size: 1.2rem;
+    height: 130px;
+}
+
+.frase{
+    font-size: 1.2rem;
+
+}
+.campo-digitacao-desativado{
+    background-color: lightgray;
+}
