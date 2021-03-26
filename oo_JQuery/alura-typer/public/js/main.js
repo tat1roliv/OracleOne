@@ -42,7 +42,7 @@ function inicializaCronometro(){
             campo.attr("disabled", true);
             clearInterval(cronometroId);
             //campo.css("background-color", "lightgray");
-            campo.addClass(".campo-digitacao-desativado");
+            campo.toggleClass("campo-digitacao-desativado");
          }
          
       }, 1000); 
@@ -60,6 +60,7 @@ function reiniciar(){
       $("#contador-caracteres").text("0");
       $("#tempo-digitacao").text(tempoInicial);
       inicializaCronometro();
+      campo.toggleClass("campo-digitacao-desativado")
 
    });
 }
