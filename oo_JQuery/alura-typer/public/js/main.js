@@ -68,7 +68,14 @@ campo.on("input", function(){
       campo.addClass("campo-errado");
       campo.removeClass("campo-correto");
    }
-
+/*
+ var digitouCorreto = frase.startsWith(digitado);
+if(digitouCorreto) {
+ campo.addClass("borda-verde");
+} else {
+ campo.addClass("borda-vermelha");
+}
+*/
 
 });
 }
