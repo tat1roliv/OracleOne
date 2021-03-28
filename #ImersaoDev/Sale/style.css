@@ -63,9 +63,21 @@ body {
     font-family: 'Courier New', Courier, monospace;
     
 	}
-    .number-user:focus:hover{
-    color: aqua;
-    }
+.number-user:focus:hover{
+  color: aqua;
+}
+    
+.boxNewText{
+  height: 2rem;
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+  color: #363636;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
       
   
   
