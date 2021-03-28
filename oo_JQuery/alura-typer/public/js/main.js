@@ -53,12 +53,15 @@ function inicializaCronometro(){
 function inserePlacar(){
    var corpoTabela = $(".placar").find("tbody");
    var usuario = "Boni";
-   var qtPalavras = $("#contador-palavras").text();
+   var numPalavras = $("#contador-palavras").text();
+   var botaoRemover = "<a href='#'><i class='small material-icons'>delete</i></a>";
 
    var linha = "<tr>"+
-                  "<td>"+usuario+"</td>" 
-                  "<td>"+qtPalavras+"</td>" 
+                  "<td>"+usuario+"</td>"+ 
+                  "<td>"+numPalavras+"</td>"+
+                  "<td>"+botaoRemover+"</td>"+
                "</tr>";
+
    corpoTabela.prepend(linha);
 }
 
@@ -90,6 +93,12 @@ function inicializaMarcadores(){
 }
 
 var tempoInicial =  $("#tempo-digitacao").text();
+
+
+$(".botao-remover").click(function(event){
+   event.preventDefault();
+   $(this).parent().parent().remove();
+});
 
 function reiniciar(){
    $("#botao-reiniciar").click(function(){
