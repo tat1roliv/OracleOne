@@ -56,14 +56,26 @@ function inserePlacar(){
    var numPalavras = $("#contador-palavras").text();
    var botaoRemover = "<a href='#'><i class='small material-icons'>delete</i></a>";
 
-   var linha = "<tr>"+
-                  "<td>"+usuario+"</td>"+ 
-                  "<td>"+numPalavras+"</td>"+
-                  "<td>"+botaoRemover+"</td>"+
-               "</tr>";
-
+   var linha = novaLinha(usuario, numPalavras);
+   
    corpoTabela.prepend(linha);
 }
+
+function novaLinha(usuario, palavras){
+   var linha = $("<tr>");
+   var colunaUsuario = $("<td>").text(usuario);
+   var colunaPalavras = $("<td>").text(palavras);
+   var colunaremover = $("<td>");
+   var link = $("<a>").addClass("botao-remover").attr("href", "#");
+   var icone = $("<i>").addClass("small").addClass("material-icons").text("delete");
+
+   link.append(icone);
+}
+
+$(".botao-remover").click(function(event){
+   event.preventDefault();
+   $(this).parent().parent().remove();
+});
 
 function finalizaJogo(){
    campo.attr("disabled", true); 
@@ -93,12 +105,6 @@ function inicializaMarcadores(){
 }
 
 var tempoInicial =  $("#tempo-digitacao").text();
-
-
-$(".botao-remover").click(function(event){
-   event.preventDefault();
-   $(this).parent().parent().remove();
-});
 
 function reiniciar(){
    $("#botao-reiniciar").click(function(){
