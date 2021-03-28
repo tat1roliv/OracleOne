@@ -1,4 +1,4 @@
-$(document).ready(function(){ //$(document).ready => $(function(){ //code });
+$(document).ready(function(){ 
    atualizaTamanhoFrase();
    inicializaContadores();
    inicializaCronometro();
@@ -8,11 +8,11 @@ $(document).ready(function(){ //$(document).ready => $(function(){ //code });
 
 function atualizaTamanhoFrase(){
 
-   var frase = $(".frase").text();//$ = jQuery
-   var numPalavras = frase.split(" ").length;//parte a string atribuindo a uma pos do array criado cada palavra;
+   var frase = $(".frase").text();
+   var numPalavras = frase.split(" ").length;
 
    var tamanhoFrase = $("#tamanho-frase");
-   tamanhoFrase.text(numPalavras);//atribuindo valor capturado
+   tamanhoFrase.text(numPalavras);
 }
 
 var campo = $(".campo-digitacao");
@@ -21,7 +21,7 @@ function inicializaContadores(){
    campo.on("input", function(){
       var conteudo = campo.val();
    
-      var qtdPalavras = conteudo.split(/\S+/).length -1;//expressao regular para espaços vazios na string => (/\S+/)
+      var qtdPalavras = conteudo.split(/\S+/).length -1;
       $("#contador-palavras").text(qtdPalavras);
    
       var qtdCaracteres = conteudo.length;
@@ -29,12 +29,11 @@ function inicializaContadores(){
    
    });
 };
-
-//timer 
+ 
 function inicializaCronometro(){
    var tempoRestante = $("#tempo-digitacao").text();
 
-   campo.one("focus", function(){// on (intermitente) x one (executa apenas uma vez) functions
+   campo.one("focus", function(){
       var cronometroId = setInterval(function(){
          tempoRestante--;
          $("#tempo-digitacao").text(tempoRestante);
@@ -42,7 +41,6 @@ function inicializaCronometro(){
          if(tempoRestante < 1){
             campo.attr("disabled", true);
             clearInterval(cronometroId);
-            //campo.css("background-color", "lightgray");
             campo.toggleClass("campo-digitacao-desativado");
             clearInterval(cronometroId);
             finalizaJogo();
@@ -52,13 +50,24 @@ function inicializaCronometro(){
 });
 };
 
+function inserePlacar(){
+   var corpoTabela = $(".placar").find("tbody");
+   var usuario = "Boni";
+   var qtPalavras = $("#contador-palavras").text();
+
+   var linha = "<tr>"+
+                  "<td>"+usuario+"</td>" 
+                  "<td>"+qtPalavras+"</td>" 
+               "</tr>";
+   corpoTabela.prepend(linha);
+}
+
 function finalizaJogo(){
    campo.attr("disabled", true); 
    campo.toggleClass("campo-digitacao-desativado");
    inserePlacar();
 }
 
-//verificacao texto digitado
 function inicializaMarcadores(){
 
    var frase = $(".frase").text();
@@ -76,25 +85,16 @@ function inicializaMarcadores(){
       campo.addClass("campo-errado");
       campo.removeClass("campo-correto");
    }
-/*
- var digitouCorreto = frase.startsWith(digitado);
-if(digitouCorreto) {
- campo.addClass("borda-verde");
-} else {
- campo.addClass("borda-vermelha");
-}
-*/
 
 });
 }
 
-//botao
 var tempoInicial =  $("#tempo-digitacao").text();
 
 function reiniciar(){
    $("#botao-reiniciar").click(function(){
       campo.attr("disabled",false);
-      campo.val("");//val ->value
+      campo.val("");
       $("#contador-palavras").text("0");
       $("#contador-caracteres").text("0");
       $("#tempo-digitacao").text(tempoInicial);
@@ -105,19 +105,5 @@ function reiniciar(){
 
    });
 }
-
-function inserePlacar(){
-   var corpoTabela = $(".placar").find("tbody");
-   var usuario = "Boni";
-   var numPalavras = $("#contador-palavras").text();
-
-   var linha = "<tr>"+
-                  "<td>" + usuario +  "<td>" 
-                  "<td>" + numPalavras +  "<td>" 
-               "</tr>";
-               
-   corpoTabela.prepend(linha);
-}
-
 
 
