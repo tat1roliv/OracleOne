@@ -44,17 +44,25 @@ function inicializaCronometro(){
             clearInterval(cronometroId);
             //campo.css("background-color", "lightgray");
             campo.toggleClass("campo-digitacao-desativado");
+            clearInterval(cronometroId);
+            finalizaJogo();
          }
          
       }, 1000); 
 });
 };
 
+function finalizaJogo(){
+   campo.attr("disabled", true); 
+   campo.toggleClass("campo-digitacao-desativado");
+   inserePlacar();
+}
+
 //verificacao texto digitado
 function inicializaMarcadores(){
 
    var frase = $(".frase").text();
-campo.on("input", function(){
+   campo.on("input", function(){
    
    var digitado = campo.val();
    var comparavel = frase.substr(0, digitado.length);
@@ -98,7 +106,16 @@ function reiniciar(){
    });
 }
 
+function inserePlacar(){
+   var corpoTabela = $(".placar").find("tbody");
+   var usuario = "Boni";
+   var numPalavras = $("#contador-palavras").text();
 
+   var linha = "<tr>"+
+                  "<td>" + usuario +  "<td>" 
+                  "<td>" + numPalavras +  "<td>" 
+               "</tr>";
+}
 
 
 
