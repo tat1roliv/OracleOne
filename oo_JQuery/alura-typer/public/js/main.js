@@ -115,6 +115,8 @@ function inserePlacar(){
                   "<td>" + usuario +  "<td>" 
                   "<td>" + numPalavras +  "<td>" 
                "</tr>";
+               
+   corpoTabela.prepend(linha);
 }
 
 
