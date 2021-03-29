@@ -78,6 +78,19 @@ body {
   font-family: 'Courier New', Courier, monospace;
   
 }
+.result{
+  margin-top: 35vh;
+  margin-left: 40vw;
+  margin-right: 40vw;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: tomato;
+  border: 3px solid tomato;
+  border-radius: 30px;
+  background-color: #cccccc;
+
+}
       
   
   
