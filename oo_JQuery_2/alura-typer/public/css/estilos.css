@@ -28,3 +28,7 @@
 .placar{
     display: none;
 }
+.erro{
+    color: red;
+    display: none;
+}
