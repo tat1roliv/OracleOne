@@ -12,6 +12,11 @@ $(function() {
         create: true,
         sortField: 'text'
     });
+    $(function() {
+        $('.tooltip').tooltipster({
+            trigger:"custom",
+        });
+    });
 });
 
 function atualizaTempoInicial(tempo){
