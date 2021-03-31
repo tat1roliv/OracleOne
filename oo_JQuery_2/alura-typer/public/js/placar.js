@@ -1,8 +1,9 @@
 $("#botao-placar").click(mostraPlacar);
+$("#botao-sync").click(sincronizaPlacar);
 
 function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
-    var usuario = "Douglas"
+    var usuario = "juliana";
     var numPalavras = $("#contador-palavras").text();
 
     var linha = novaLinha(usuario, numPalavras);
@@ -57,3 +58,38 @@ function mostraPlacar(){
     $(".placar").stop().slideToggle(1000);//show() //hide()//toggle()//slideDown() //slideUp()
 
 }
+
+function sincronizaPlacar(){
+    var placar = [];
+    
+    var linhas = $("tbody>tr");//selecionar todos os filhos do tbody -> todas tr
+    //foreach
+    linhas.each(function(){
+        var usuario = $(this).find("td:nth-child(1)").text();
+        var palavras =  $(this).find("td:nth-child(2)").text();
+        
+        var score = {
+            usuario: usuario,
+            pontos: palavras
+        };
+        placar.push(score);
+    } );
+
+    console.log(placar);
+    /*
+    para enviar para o servidor, nao envia direto o array->
+    string ou objeto JS
+    */
+    var dados ={
+        placar: placar
+    };
+    /*
+    get -> retorna placar que estar no servidor (localhost/placar)
+    post -> sobrescreve o placar anterior com o que vc enviar
+    */
+    $.post("http://localhost:3000/placar", dados, function(){
+        console.log("salvou dados no servidor");
+    });
+
+};
+

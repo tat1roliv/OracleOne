@@ -33,7 +33,7 @@ function buscaFrase() {
     //criacao do objeto JS que guarda a id
     var dados = {id : fraseId}; 
 
-    //passando objecto como segundo parametro
+    //passando objeto como segundo parametro
     $.get("http://localhost:3000/frases", dados, trocaFrase)
     .fail(function(){
         $("#erro").toggle();
@@ -51,7 +51,7 @@ function trocaFrase(data) {
     console.log(data);
 
     var frase = $(".frase");
-    frase.text(data.texto); //cuidado, texto com "o" no final 
+    frase.text(data.texto);
     atualizaTamanhoFrase();
     atualizaTempoInicial(data.tempo);
 }
