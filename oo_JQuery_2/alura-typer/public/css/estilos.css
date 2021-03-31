@@ -25,16 +25,19 @@
     border: 3px solid red;
 }
 
-.placar{
+.placar {
     display: none;
 }
-.erro{
+
+body {
+    overflow: scroll;
+}
+
+#erro{
     color: red;
     display: none;
 }
-.spinner{
+
+#spinner {
     display: none;
-}
-#frase-id{
-    width: 40px;
 }
