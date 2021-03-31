@@ -8,7 +8,11 @@
        
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/estilos.css">   
+
+    <link rel="stylesheet" href="css/selectize.default.css">
                     
 </head>
 <body>
@@ -56,6 +60,17 @@
                 <i class="material-icons">repeat_one</i>
             </a>
             <input type="number" min="0" id="frase-id">
+
+            <div class="select-usuarios">
+                <select id="usuarios">
+                    <option value="Juliana">Juliana</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Sandy">Sandy</option>
+                    <option value="Jr">Jr</option>
+                </select>
+
+            </div>
+
             <a id="botao-sync" class="btn-floating btn-large waves-effect waves-light yellow">
                 <i class="material-icons">swap_vert</i>
             </a>
@@ -90,6 +105,7 @@
     <script src="js/frase.js"></script>
     <script src="js/slider.js"></script>
     <script  src="slick/slick.min.js"></script>
+    <script src="js/selectize.js"></script>
 
 </body>
 </html>

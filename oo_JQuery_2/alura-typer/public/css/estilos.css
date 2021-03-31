@@ -47,3 +47,10 @@ body {
 #botao-sync{
     float: right;
 }
+.select-usuarios {
+    display: block;
+}
+.selectize-input{
+    height:2.5rem;
+    vertical-align:middle;
+}
