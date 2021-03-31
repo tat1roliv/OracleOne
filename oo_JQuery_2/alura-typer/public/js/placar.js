@@ -95,11 +95,11 @@ function sincronizaPlacar(){
 
 function atualizaPlacar() {
     $.get("http://localhost:3000/placar", function(data){
-        console.log('puxando dados do servidor');
+        //console.log('puxando dados do servidor');
         $(data).each(function(){
             var linha = novaLinha(this.usuario,this.pontos);
             linha.find(".botao-remover").click(removeLinha);
-            console.log(linha);
+            //console.log(linha);
             $("tbody").append(linha);
         })
     })
