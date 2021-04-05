@@ -1,0 +1,26 @@
+.header-menu{
+    background: url('../img/destaque.jpeg') no-repeat;
+    background-size: cover;
+    padding-top: 32px;
+}
+
+.header-menu-options{
+    text-align: center;
+}
+
+.header-menu-item{
+    display: inline-block;
+    margin: 0 2rem 2rem 0;
+}
+.header-menu-item a{
+    color: #ffffff;
+    padding:1rem;
+    background: rgba(0,0,0,0.1);
+    border-radius:10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 1s;
+}
+.header-menu-item a:hover{
+    background-color: rgba(50, 241, 194, 0.5);
+}
