@@ -42,3 +42,24 @@
     font-size: 2.5rem;
     margin-top:10px;
 }
+.header-jumbotron .button{
+    display:inline-block;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: #48A3A6;
+}
+.panel-subscribe{
+    margin-top:1rem;
+}
+@media (min-width: 768px){
+    .jumbotron-title{
+        font-size:4.5rem;
+    }
+    .jumbotron-subtitle{
+        font-size: 3rem;
+    }
+}
