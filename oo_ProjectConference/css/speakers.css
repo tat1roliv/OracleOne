@@ -1,0 +1,19 @@
+.panel-speakers{
+    background: #EF7247;
+    padding-top: 40px;
+}
+.about-speakers{
+    text-align:center;
+}
+.speaker-tittle{
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.speaker-subtittle{
+    color: #ffffff;
+    font-size:2rem;
+    margin-bottom: 1rem;
+    
+}

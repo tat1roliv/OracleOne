@@ -3,7 +3,7 @@
 body{
     font-family: 'Ubuntu', sans-serif;
     width: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
     box-sizing: border-box;
 }
 .container{
