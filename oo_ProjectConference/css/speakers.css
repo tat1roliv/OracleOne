@@ -15,5 +15,30 @@
     color: #ffffff;
     font-size:2rem;
     margin-bottom: 1rem;
-    
+}
+.speakers{
+    text-align: center;
+}
+.speaker{
+    background: #ffffff;
+    display: inline-block;
+    margin: 0 1rem 2rem 0;
+    padding:1rem;
+    border-radius: 10px;
+    vertical-align: top;
+    width: 220px;
+}
+.speaker-image {
+    border-radius: 50%;
+}
+.speaker-name{
+    margin-top:0.5rem;   
+}
+.speaker-bio{
+    margin-top:0.8rem;
+    font-weight: bold;
+}
+.speaker-speach{
+    margin-top:0.5rem;
+    font-size: 0.8rem;
 }
