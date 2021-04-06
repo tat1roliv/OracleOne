@@ -10,3 +10,34 @@ body{
     width: 100%;
     margin: 0 auto;
 }
+.button{
+    display:inline-block;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: #48A3A6;
+    border: none;
+}
+.field{
+    margin-bottom: 1rem;
+}
+.field-label{
+    margin: 1rem;
+    display: block;
+    font-weight: bold;
+    font-size:1.2rem;
+    margin-bottom: 0.5rem;
+}
+.field-input{
+    margin: 1rem;
+    width:100%;
+    display: block;
+    font-size:1.2rem;
+    padding: 0.5rem;
+    border-radius:5px;
+    box-shadow: 1px 1px 5px;
+    border: 1px solid #48A3A6;
+}
