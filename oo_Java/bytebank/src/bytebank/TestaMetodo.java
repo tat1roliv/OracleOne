@@ -30,11 +30,8 @@ public class TestaMetodo {
 		System.out.println(contaUser2.saldo);
 		
 		
-		/*
-		 //chamando metodo
-Conta contaDoPaulo = new Conta();
-contaDoPaulo.deposita(30.0);
-		 */
+		contaUser.titular = "boni xi ping";
+		System.out.println(contaUser.titular);
 
 	}
 

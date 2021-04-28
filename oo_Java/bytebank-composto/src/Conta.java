@@ -1,11 +1,11 @@
-package bytebank;
 
+//bytenank-composto
 public class Conta {
 	//atributos
-	double saldo;
+	private double saldo; //privado (nao pode ser modificado e nem lido externamente => encapsulamento )
 	int agencia;//=42 (pode ser atribuido um preenchimento padrao)
 	int numero;
-	String titular;
+	Cliente titular; //new Cliente();
 		
 	//metodos
 	public void deposita(double valor) {
@@ -30,5 +30,10 @@ public class Conta {
 		}
 		return false;
 	}
+	
+	public double getSaldo() {
+		return this.saldo; //para acessar a info private
+	}
+
 
 }
