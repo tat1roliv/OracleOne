@@ -3,8 +3,8 @@ public class TestGetSet {
 
 	public static void main(String[] args) {
 		
-		Conta conta = new Conta();
-		conta.setNumero(1337);
+		Conta conta = new Conta(1337, 24226);
+		
 		System.out.println(conta.getNumero());
 		
 		Cliente paulo = new Cliente();
@@ -15,6 +15,8 @@ public class TestGetSet {
 		System.out.println(conta.getTitular().getNome());
 		
 		conta.getTitular().setProfissao("designer");
+		
+		
 		
 	}
 	
