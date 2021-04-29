@@ -6,7 +6,7 @@ public class Funcionario {
 	private String cpf;
 	private double salario;
 	
-	//construtor (mesmo nome da classe, nao tem return -> default nao receber parametros)
+	//construtor (mesmo nome da classe, nao tem return -> e)
 	
 
 	//bonificacao
