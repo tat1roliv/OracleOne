@@ -11,14 +11,15 @@ public class Gerente extends Funcionario{//herda do func(classe)
 			return false;
 		}
 	}
-
 	
 	//bonificacao
-	/*
-	public double getBonificacao() {
-		return this.salario;
-	}
-	*/
+	//reescrita de metodo do func
+	//super => this da classe mae (o atributo esta definido na classe mae, nao na classe filha = nao usar this)
+	
+    public double getBonificacao() {
+        return super.getBonificacao() + super.getSalario();
+    }
+	
 	
 	//setters and getters
 	public int getSenha() {
@@ -27,9 +28,6 @@ public class Gerente extends Funcionario{//herda do func(classe)
 
 	public void setSenha(int senha) {
 		this.senha = senha;
-	}
-	
-	
-	
+	}	
 	
 }
