@@ -3,7 +3,7 @@
 
 	    public double getBonificacao() {
 	    	System.out.println("boni editor video");
-	        return super.getBonificacao() + 100;
+	        return 150;
 	    }
 		
 	

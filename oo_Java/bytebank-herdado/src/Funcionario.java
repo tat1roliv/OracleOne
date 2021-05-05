@@ -1,6 +1,6 @@
 //bytebank-herdado
 
-public class Funcionario {
+public abstract class Funcionario {
 
 	private String nome;
 	private String cpf;
@@ -12,9 +12,9 @@ public class Funcionario {
 	//construtor (mesmo nome da classe, nao tem return -> e)
 	
 	//bonificacao
-	public double getBonificacao() {
-		return this.salario * 0.05;
-	}
+	//metodo sem corpo
+	public abstract double getBonificacao();
+	
 	
 	//getters setters
 	public String getNome() {

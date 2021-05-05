@@ -17,7 +17,7 @@ public class Gerente extends Funcionario{//herda do func(classe)
 	//super => this da classe mae (o atributo esta definido na classe mae, nao na classe filha = nao usar this)
 	
     public double getBonificacao() {
-        return super.getBonificacao() + super.getSalario();
+        return super.getSalario();
     }
 	
 	
