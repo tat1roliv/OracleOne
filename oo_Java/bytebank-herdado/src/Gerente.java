@@ -1,6 +1,6 @@
 //bytebank-herdado
 
-public class Gerente extends Funcionario{//herda do func(classe)
+public class Gerente extends FuncionarioAutenticavel{//herda do func(classe)
 	
 	private int senha;
 	
