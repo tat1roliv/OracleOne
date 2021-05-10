@@ -15,8 +15,7 @@ public class TesteSistema {
 		SistemaInterno si = new SistemaInterno();
 		si.autentica(g);
 		si.autentica(adm);
-		si.autentica(cliente);
-		
+		si.autentica(cliente);	
 		
 	}
 
