@@ -11,6 +11,14 @@ package br.com.bytebank.banco.teste;
  * 	length;
  * 	isEmpty;
  * 	contains;
+ * 	trim;
+ * 	split;
+ * 
+ * System.out.println -> o que é, visibilidade, acesso, pacote
+ * System (classe, java.lang, public)
+ * out(atributo, publico, referencia, static)
+ * println()(metodo, public, nao static, sobrecarga, nao checked)
+ * 
  * 
  *  * @author tatio
  *
