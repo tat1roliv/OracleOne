@@ -1,5 +1,12 @@
 package br.com.bytebank.banco.teste;
 
+/**
+ * 
+ *  
+ * @author tatio
+ * @version 0.1
+ */
+
 import br.com.bytebank.banco.modelo.CalculadorDeImposto;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.SeguroDeVida;
