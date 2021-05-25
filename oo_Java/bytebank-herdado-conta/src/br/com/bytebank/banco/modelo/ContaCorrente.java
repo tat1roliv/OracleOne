@@ -25,8 +25,7 @@ public class ContaCorrente extends Conta implements Tributavel {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return "Agência : " + super.getAgencia() + " Conta corrente " + super.toString();
+		return "ContaCorrente, " + super.toString();
 	}
 	
 }

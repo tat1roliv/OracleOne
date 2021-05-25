@@ -9,6 +9,9 @@ public class TesteArrayReferencias {
 	public static void main(String[] args) {
 		
 		Conta[] contas = new Conta[5];
+		
+		//Object[] referencias = new Object[5];
+		
 
 		ContaCorrente cc1 = new ContaCorrente(111, 110);
 		contas[0] = cc1;
