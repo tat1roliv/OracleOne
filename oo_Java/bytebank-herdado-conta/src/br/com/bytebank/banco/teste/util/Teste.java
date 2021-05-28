@@ -1,51 +1,73 @@
 package br.com.bytebank.banco.teste.util;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
+import br.com.bytebank.banco.modelo.ContaPoupanca;//ctrl + shift + o
 
 public class Teste {
 
 	public static void main(String[] args) {
 		
-		ArrayList<Conta> lista = new ArrayList<Conta>();
-		
-		ArrayList<String> nomes = new ArrayList<String>();
-		
-		
-		
-		
-		Conta cc = new ContaCorrente(22,11);
-		lista.add(cc);
-		
-		Conta cc2 = new ContaCorrente(44,33);
-		lista.add(cc2);
-		
-		System.out.println(lista.size());
-		
-		Conta ref = lista.get(0);
-		System.out.println(ref.getNumero());
-		
-		lista.remove(0);
-		
-		System.out.println(lista.size());
-		
-		Conta cc3 = new ContaCorrente(55,66);
-		lista.add(cc3);
-		
-		Conta cc4 = new ContaCorrente(77,88);
-		lista.add(cc4);
-		
-		for(int i = 0; i<lista.size(); i++) {
-			Object oRef = lista.get(i);
-			System.out.println(oRef);
-		}
-		
-		for(Conta oRef : lista) {
-			System.out.println(oRef);
-		}
+        Conta cc1 = new ContaCorrente(22, 33);
+        cc1.deposita(333.0);
 
-	}
+        Conta cc2 = new ContaPoupanca(22, 44);
+        cc2.deposita(444.0);
 
+        Conta cc3 = new ContaCorrente(22, 11);
+        cc3.deposita(111.0);
+
+        Conta cc4 = new ContaPoupanca(22, 22);
+        cc4.deposita(222.0);
+
+        List<Conta> lista = new ArrayList<>();
+        lista.add(cc1);
+        lista.add(cc2);
+        lista.add(cc3);
+        lista.add(cc4);
+        
+        for (Conta conta : lista) {
+        	System.out.println(conta);
+        }
+        
+        NumeroDaContaComparator comparator = new NumeroDaContaComparator();
+        lista.sort(comparator);
+
+	
+	    System.out.println("---------");
+	
+	    lista.sort(comparator);
+	
+	    for (Conta conta : lista) {
+	        System.out.println(conta);
+	    }
+
+	
 }
+}
+		
+	class NumeroDaContaComparator implements Comparator<Conta>{
+
+		@Override
+		public int compare(Conta c1, Conta c2) {
+			
+
+        if(c1.getNumero() < c2.getNumero()) {
+            return -1;
+        }
+
+        if(c1.getNumero() > c2.getNumero()) {
+            return 1;
+        }
+
+		
+			return 0;
+		}		
+		
+	
+}
+
