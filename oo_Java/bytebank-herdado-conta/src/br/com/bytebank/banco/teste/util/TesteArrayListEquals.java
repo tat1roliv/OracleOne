@@ -12,6 +12,7 @@ public class TesteArrayListEquals {
 	public static void main(String[] args) {
 		
 		//Arraylist x LinkedList X list
+		//LinkedList e ArrayList são duas implementações diferentes da interface List. A LinkedList é uma lista duplamente "linkada" e a ArrayList representa um array com redimensionamento dinâmico.
 		
 		//Generics		
 		List<Conta> lista = new LinkedList<Conta>();
