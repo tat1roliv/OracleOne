@@ -19,7 +19,7 @@ public class TesteLeitura {
 			
 			//padrao decorator -> um objeto decora o anterior
 			//fluxo de entrada com Arquivo	
-			InputStream fis = new FileInputStream("lorem.txt");//file //string
+			InputStream fis = new FileInputStream("lorem2.txt");//file //string
 			Reader isr = new InputStreamReader(fis);//bytes em caracteres
 			BufferedReader br = new BufferedReader(isr);//juntar caracteres
 			
